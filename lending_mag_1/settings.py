@@ -137,9 +137,9 @@ MEDIA_URL = '/media/'
 
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = '___________@gmail.com'
-EMAIL_HOST_PASSWORD = 'aa22448866'
+EMAIL_HOST_USER = '@gmail.com'
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-MAIL_FOR_ALERT = '__________@yandex.ru'
+MAIL_FOR_ALERT = '@yandex.ru'

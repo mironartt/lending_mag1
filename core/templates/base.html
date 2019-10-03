@@ -73,44 +73,172 @@
     }
 </style>
 {% csrf_token %}
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <a class="navbar-brand" href="index.html">
-            <img src="{% static 'img/logo.png' %}" alt="" class="img-fluid">
-        </a>
-        <a class="navbar-brand" href="#">ВАШЕ ЛОГО И НАЗВАНИЕ</a>
-
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navigation"
-            aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="fa fa-bars"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navigation" >
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-links" href="gallery.html">+ 7-495-886-45-53</a></li>
+{#<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">#}
+{#    <div class="container">#}
+{#        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">#}
+{#            <span class="navbar-toggler-icon"></span>#}
+{#        </button>#}
+{##}
+{#        <a class="navbar-brand" href="index.html">#}
+{#            <img src="{% static 'img/logo.png' %}" alt="" class="img-fluid">#}
+{#        </a>#}
+{#        <a class="navbar-brand" href="#">ВАШЕ ЛОГО И НАЗВАНИЕ</a>#}
+{##}
+{#        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navigation"#}
+{#            aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">#}
+{#            <span class="fa fa-bars"></span>#}
+{#        </button>#}
+{##}
+{#        <div class="collapse navbar-collapse" id="navigation" >#}
+{#            <ul class="navbar-nav ml-auto">#}
+{#                <li class="nav-item"><a class="nav-links" href="gallery.html">+ 7-495-886-45-53</a></li>#}
 {#                <li class="nav-item"><a class="nav-links" href="gallery.html">Контакты</a></li>#}
-            </ul>
-        </div>
-    </div>
-</nav>
-<div style="position: relative; padding-top: 70px;">
-<!-- Header Close -->
-<section class="section-header" style="background: #84c7af url({% static 'img/header.jpg' %}); height: 100px">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-12" style="position: relative; top: -130px;">
-              <div class="text-center">
-                  <h1 class="text-capitalize mb-4 font-lg text-white">ВАШЕ НАЗВАНИЕ</h1>
-                  <p style="color: black">Можно любое другое изображение на ваш выбор</p>
-            </div>
-          </div>
-      </div>
+{#            </ul>#}
+{#        </div>#}
+{#    </div>#}
+{#</nav>#}
+
+<nav class="site-header sticky-top py-1" style="background-color: #e4606d">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2" href="#" STYLE="margin-left: 400px">
+        <h2>babypacks.ru</h2>
+    </a>
+{#    <a class="py-2 d-none d-md-inline-block" href="#">Tour</a>#}
+{#    <a class="py-2 d-none d-md-inline-block" href="#">Product</a>#}
+{#    <a class="py-2 d-none d-md-inline-block" href="#">Features</a><sou></sou>#}
+{#    <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>#}
+{#    <a class="py-2 d-none d-md-inline-block" href="#">Support</a>#}
+{#    <a class="py-2 d-none d-md-inline-block" href="#">Pricing</a>#}
+{#    <a class="py-2 d-none d-md-inline-block" href="#">Cart</a>#}
   </div>
-</section>
+</nav>
+
+
+<!-- Header Close -->
+{#<section class="section-header" style="background: #84c7af url({% static 'img/header.jpg' %}); height: 100px">#}
+{#  <div class="container">#}
+{#      <div class="row">#}
+{#          <div class="col-lg-12" style="position: relative; top: -130px;">#}
+{#              <div class="text-center">#}
+{#                  <h1 class="text-capitalize mb-4 font-lg text-white">ВАШЕ НАЗВАНИЕ</h1>#}
+{#                  <p style="color: black">Можно любое другое изображение на ваш выбор</p>#}
+{#            </div>#}
+{#          </div>#}
+{#      </div>#}
+{#  </div>#}
+{#</section>#}
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+      <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+      <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+    </ol>
+    <div class="carousel-inner" >
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="400px" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"></rect></svg>
+        <div class="container" >
+          <div class="carousel-caption text-left">
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="400px" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"></rect></svg>
+        <div class="container">
+          <div class="carousel-caption">
+            <p>Text</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item active" >
+        <svg class="bd-placeholder-img" width="100%" height="400px" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"></rect></svg>
+        <div class="container">
+          <div class="carousel-caption text-right">
+            <p>Text</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+<div style="position: relative; padding-top: 70px;">
+
+<div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <i class="icofont-badge big" style="font-size: 65px;margin-left: 55px"></i>     <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+        <h2>Качество</h2>
+        <p>Оригинальная продукция примяком из лучших бутиков мира</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <i class="icofont-badge" style="font-size: 65px;margin-left: 55px"></i> <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+        <h2>Цена</h2>
+        <p>Без лишних наценок и переплат</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <i class="icofont-badge" style="font-size: 65px;margin-left: 55px"></i> <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+        <h2>Доставка</h2>
+        <p>"Почтой России" или СДЭК</p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider" >
+
+    <div class="row featurette" >
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Premium <span class="text-muted">Комплекты одежды для новорожденных</span></h2>
+        <p class="lead">Мы собрали лучшие комплекты самых известных брендов, в одном месте, специально для вас</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Состав <span class="text-muted">100% гипоаллергенный хлопок, прошедший Европейскую сертификацию</span></h2>
+        <p class="lead">Материал, прикосновение к которому, развеит все ваши сомнения</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Линейка размеров <span class="text-muted">54-62</span></h2>
+        <p class="lead">Боди 35 см
+Штаны 35 см
+Кофта 28 см
+Длина рукава 18,5 см</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div>
 
   <section style="padding: 10px 0; position: relative; bottom: 100px;">
 	<div class="container">
@@ -244,6 +372,17 @@
 				</div>
 			</div>
 
+{#			<div class="col-lg-4 ml-auto col-md-5 mb-5 mb-lg-0">#}
+{#				<div class="widget">#}
+{#					<h4 class="mb-3">Контакты</h4>#}
+{##}
+{#					<ul class="list-unstyled mb-0 footer-contact">#}
+{#						<li><i class="ti-mobile"></i>+1 987 654 3210</li>#}
+{#						<li><i class="ti-email"></i>mail@support.com</li>#}
+{#						<li><i class="ti-map"></i>Ваш адрес </li>#}
+{#					</ul>#}
+{#				</div>#}
+{#			</div>#}
 			<div class="col-lg-4 ml-auto col-md-5 mb-5 mb-lg-0">
 				<div class="widget">
 					<h4 class="mb-3">Контакты</h4>
@@ -253,20 +392,6 @@
 						<li><i class="ti-email"></i>mail@support.com</li>
 						<li><i class="ti-map"></i>Ваш адрес </li>
 					</ul>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 mb-5 mb-lg-0">
-				<div class="widget">
-					<h4 class="mb-3">Часы работы</h4>
-
-					<div class="info mb-4">
-						<p class="mb-0">Понедельник - Пятница</p>
-						<h5>10:00 - 22:00</h5>
-					</div>
-					<div class="info">
-						<p class="mb-0">Суббота - Воскресенье</p>
-						<h5>12:00 - 17:00</h5>
-					</div>
 				</div>
 			</div>
 		</div>
