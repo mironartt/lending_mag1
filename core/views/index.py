@@ -19,16 +19,17 @@ class IndexView(generic.View):
 
     def post(self, request, *args, **kwargs):
         response_data = {'nice':1}
-        try:
-            order = Order.objects.create(
-                name=request.POST['name'],
-                email=request.POST['email'],
-                phone=request.POST['phone'],
-            )
-            for i in request.POST.getlist('product[]'):
-                order.products.add(Product.objects.get(id=int(i)))
+        
+        order = Order.objects.create(
+	    name=request.POST['name'],
+	    email=request.POST['email'],
+	    phone=request.POST['phone'],
+        )
+        for i in request.POST.getlist('product[]'):
+	    order.products.add(Product.objects.get(id=int(i)))
 
-            order.save()
+        order.save()
+	try:
             products_orders = order.products.all()
             message = """
                 Новый заказ на сайте!\n\n
@@ -49,5 +50,5 @@ class IndexView(generic.View):
                 [settings.MAIL_FOR_ALERT,],
             )
         except:
-            response_data['nice'] = 0
+            pass
         return HttpResponse(json.dumps(response_data), content_type="application/json")

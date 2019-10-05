@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+
+lending_mag_1/local_settings.py
+deployment/
+logs/
+
