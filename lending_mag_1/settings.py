@@ -11,15 +11,21 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-try:
-    from .local_settings import *
-except ImportError:
-    pass
+
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = '8)!%7e9ml!psz-7pdgylas$*dsq!=ebb%prd%76i!_=!46_^c3'
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -64,6 +70,20 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'lending_mag_1.wsgi.application'
 
+
+# Database
+# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+
+DATABASES = {
+  'default': {
+      'ENGINE': 'django.db.backends.postgresql_psycopg2',
+      'NAME': 'lending_mag_1_db',
+      'USER': 'lending_mag_1_user',
+      'PASSWORD': 'lending_mag_1_password',
+      'HOST': 'localhost',
+      'PORT': '5432',
+    }
+}
 
 
 # Password validation
@@ -115,7 +135,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-if SECRET_KEY == '':
-    print('EMPTY SECRET_KEY! Check local_settings.py')
-    sys.exit()
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = '___________@gmail.com'
+EMAIL_HOST_PASSWORD = 'aa22448866'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+MAIL_FOR_ALERT = '__________@yandex.ru'

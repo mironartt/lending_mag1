@@ -24,4 +24,4 @@ class Order(models.Model):
     name = models.CharField(max_length=200, verbose_name='Имя заказчика')
     phone = models.CharField(max_length=20, verbose_name='Телефон')
     email = models.CharField(max_length=50, verbose_name='Email')
-    products = models.ManyToManyField(Product, related_name='product', verbose_name='Продукты заказа')
+    products = models.ManyToManyField(Product, related_name='product', verbose_name='Продукты заказа', null=True, blank=True)
